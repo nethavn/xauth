@@ -1,0 +1,30 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    created_at:
+        label     : ki.xauth::lang.logs.created_at
+        searchable: yes
+
+    provider:
+        label     : ki.xauth::lang.logs.provider
+        searchable: yes
+
+    result:
+        label     : ki.xauth::lang.logs.result
+        searchable: yes
+
+    user_id:
+        label   : ki.xauth::lang.logs.user_id
+        relation: user
+        select  : login
+
+    email:
+        label     : ki.xauth::lang.logs.email
+        searchable: yes
+
+    ip:
+        label     : ki.xauth::lang.logs.ip
+        searchable: yes

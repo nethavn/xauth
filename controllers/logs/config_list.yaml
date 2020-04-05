@@ -1,0 +1,12 @@
+title     : ki.xauth::lang.plugin.description_title
+list      : $/ki/xauth/models/logs/columns.yaml
+modelClass: KI\XAUTH\Models\Log
+
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage  : 30
+showSetup       : true
+
+toolbar:
+    buttons: list_toolbar
+    search :
+        prompt: backend::lang.list.search_prompt

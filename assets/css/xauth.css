@@ -1,0 +1,3 @@
+#xauth-container { margin-top:20px; padding-top:20px; border-top:solid 1px #1D2D3D; text-align:center; }
+#xauth-button-google { display:block; width:240px; height:50px; margin:auto; background:url('../imgs/btn_google_signin_dark_normal_web.png'); border:none; }
+#xauth-button-google:hover { background-image:url('../imgs/btn_google_signin_dark_normal_web.png'); }
