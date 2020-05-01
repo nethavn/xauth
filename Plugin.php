@@ -18,7 +18,7 @@
                 if(\Backend\Classes\BackendController::$action == 'signin') {
 
                     if(Settings::get('google_button') == 'light') {
-                        $CSS[] = 'xauth-light.css';
+                        $CSS[] = 'xauth.css';
                     } else {
                         $CSS[] = 'xauth.css';
                     }
