@@ -1,12 +1,12 @@
 <?php
 
-    namespace KI\XAUTH;
+    namespace NETHAVN\XAUTH;
 
     use Event, View;
     use System\Classes\PluginBase;
     use System\Classes\SettingsManager;
     use System\Classes\CombineAssets;
-    use KI\XAUTH\Models\Settings;
+    use NETHAVN\XAUTH\Models\Settings;
 
     class Plugin extends PluginBase {
 
@@ -27,22 +27,22 @@
                         $CSS[] = 'hide-login.css';
                     }
 
-                    $controller->addCss(CombineAssets::combine($CSS, plugins_path() . '/ki/xauth/assets/css/'));
+                    $controller->addCss(CombineAssets::combine($CSS, plugins_path() . '/nethavn/xauth/assets/css/'));
 
                 }
             });
 
             Event::listen('backend.auth.extendSigninView', function($controller) {
-                return View::make("ki.xauth::login");
+                return View::make("nethavn.xauth::login");
             });
 
         }
 
         public function pluginDetails() {
             return [
-                'name'        => 'ki.xauth::lang.plugin.name',
-                'description' => 'ki.xauth::lang.plugin.description',
-                'author'      => 'Knight Industries',
+                'name'        => 'nethavn.xauth::lang.plugin.name',
+                'description' => 'nethavn.xauth::lang.plugin.description',
+                'author'      => 'nethavn',
                 'icon'        => 'icon-key'
             ];
         }
@@ -50,21 +50,21 @@
         public function registerSettings() {
             return [
                 'settings' => [
-                    'label'       => 'ki.xauth::lang.plugin.name',
-                    'description' => 'ki.xauth::lang.plugin.description',
+                    'label'       => 'nethavn.xauth::lang.plugin.name',
+                    'description' => 'nethavn.xauth::lang.plugin.description',
                     'icon'        => 'icon-key',
-                    'class'       => '\KI\XAUTH\Models\Settings',
+                    'class'       => '\NETHAVN\XAUTH\Models\Settings',
                     'order'       => 800,
-                    'permissions' => ['ki.xauth.access'],
+                    'permissions' => ['nethavn.xauth.access'],
                     'category'    => 'system::lang.system.categories.system'
                 ],
                 'logs' => [
-                    'label'       => 'ki.xauth::lang.plugin.name',
-                    'description' => 'ki.xauth::lang.plugin.description_log',
+                    'label'       => 'nethavn.xauth::lang.plugin.name',
+                    'description' => 'nethavn.xauth::lang.plugin.description_log',
                     'icon'        => 'icon-key',
-                    'url'         => \Backend::url('ki/xauth/logs'),
+                    'url'         => \Backend::url('nethavn/xauth/logs'),
                     'order'       => 800,
-                    'permissions' => ['ki.xauth.access'],
+                    'permissions' => ['nethavn.xauth.access'],
                     'category'    => SettingsManager::CATEGORY_LOGS,
                 ],
             ];
@@ -72,7 +72,7 @@
 
         public function registerPermissions() {
             return [
-                'ki.xauth.access'  => ['tab' => 'system::lang.permissions.name', 'label' => 'ki.xauth::lang.plugin.permissions'],
+                'nethavn.xauth.access'  => ['tab' => 'system::lang.permissions.name', 'label' => 'nethavn.xauth::lang.plugin.permissions'],
             ];
         }
 

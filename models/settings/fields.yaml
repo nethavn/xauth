@@ -2,34 +2,34 @@ fields:
 
     google_help:
         type   : partial
-        path   : $/ki/xauth/models/settings/_google_help.htm
+        path   : $/nethavn/xauth/models/settings/_google_help.htm
         stretch: true
         span   : right
 
     google_client_id:
-        label   : ki.xauth::lang.settings.google.google_client_id
+        label   : nethavn.xauth::lang.settings.google.google_client_id
         span    : left
         required: true
 
     google_client_secret:
-        label   : ki.xauth::lang.settings.google.google_client_secret
+        label   : nethavn.xauth::lang.settings.google.google_client_secret
         span    : left
         required: true
 
     google_button:
-        label  : ki.xauth::lang.settings.google.google_button
+        label  : nethavn.xauth::lang.settings.google.google_button
         type   : dropdown
         options:
-            dark : ki.xauth::lang.settings.google.google_button_opts.dark
-            light: ki.xauth::lang.settings.google.google_button_opts.light
+            dark : nethavn.xauth::lang.settings.google.google_button_opts.dark
+            light: nethavn.xauth::lang.settings.google.google_button_opts.light
         default: dark
         span   : left
 
     section_interface:
-        label  : ki.xauth::lang.settings.generic.section_interface
+        label  : nethavn.xauth::lang.settings.generic.section_interface
         type   : section
 
     hide_login_fields:
-        label  : ki.xauth::lang.settings.generic.hide_login_fields
+        label  : nethavn.xauth::lang.settings.generic.hide_login_fields
         type   : switch
-        comment: ki.xauth::lang.settings.generic.hide_login_fields_comm
+        comment: nethavn.xauth::lang.settings.generic.hide_login_fields_comm

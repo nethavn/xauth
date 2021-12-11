@@ -1,9 +1,9 @@
 <?php
 
-    namespace KI\XAUTH\Controllers;
+    namespace NETHAVN\XAUTH\Controllers;
 
-    use KI\XAUTH\Models\Settings as Settings;
-    use KI\XAUTH\Models\Log      as Log;
+    use NETHAVN\XAUTH\Models\Settings as Settings;
+    use NETHAVN\XAUTH\Models\Log      as Log;
 
     use Backend\Classes\Controller;
     use Backend, BackendAuth, Config, Flash, Input, Lang, Request, Session, ValidationException;
@@ -31,7 +31,7 @@
             $client = new Google_Client();
             $client->setClientId(Settings::get('google_client_id'));
             $client->setClientSecret(Settings::get('google_client_secret'));
-            $client->setRedirectUri(Backend::url('ki/xauth/google'));
+            $client->setRedirectUri(Backend::url('nethavn/xauth/google'));
             $client->setScopes('email');
 
             # HANDLE LOGOUTS
@@ -76,7 +76,7 @@
                 $log->ip       = Request::getClientIp();
                 $log->save();
 
-                Flash::error(trans('ki.xauth::lang.errors.google.invalid_user'));
+                Flash::error(trans('nethavn.xauth::lang.errors.google.invalid_user'));
                 return Backend::redirect('backend/auth/signin');
             }
 
@@ -95,7 +95,7 @@
                 $log->ip       = Request::getClientIp();
                 $log->save();
 
-                Flash::error(trans('ki.xauth::lang.errors.google.invalid_user'));
+                Flash::error(trans('nethavn.xauth::lang.errors.google.invalid_user'));
                 return Backend::redirect('backend/auth/signin');
             }
 
@@ -130,7 +130,7 @@
             foreach($settings as $setting) {
                 if(Settings::get($setting) == '') {
                     throw new ValidationException([
-                        'code' => Lang::get('ki.xauth::lang.errors.google.generic') . Lang::get('ki.xauth::lang.errors.google.'.$setting.'_blank')
+                        'code' => Lang::get('nethavn.xauth::lang.errors.google.generic') . Lang::get('nethavn.xauth::lang.errors.google.'.$setting.'_blank')
                     ]);
                 }
             }

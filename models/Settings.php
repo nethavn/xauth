@@ -1,6 +1,6 @@
 <?php
 
-    namespace KI\XAUTH\Models;
+    namespace NETHAVN\XAUTH\Models;
 
     use Model;
     use Lang;
@@ -17,13 +17,13 @@
 
         public $attributeNames;
         public $implement      = ['System.Behaviors.SettingsModel'];
-        public $settingsCode   = 'ki_xauth_settings';
+        public $settingsCode   = 'nethavn_xauth_settings';
         public $settingsFields = 'fields.yaml';
 
         public function __construct() {
             $this->attributeNames = [
-                'google_client_id'     => Lang::get('ki.xauth::lang.settings.google.client_id'),
-                'google_client_secret' => Lang::get('ki.xauth::lang.settings.google.client_secret')
+                'google_client_id'     => Lang::get('nethavn.xauth::lang.settings.google.client_id'),
+                'google_client_secret' => Lang::get('nethavn.xauth::lang.settings.google.client_secret')
             ];
             parent::__construct();
         }

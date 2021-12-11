@@ -1,6 +1,6 @@
 <?php
 
-    namespace KI\XAUTH\Updates;
+    namespace NETHAVN\XAUTH\Updates;
 
     use Schema;
     use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@
     class CreateTable extends Migration {
 
         public function up() {
-            Schema::create('ki_xauth_logs', function($table) {
+            Schema::create('nethavn_xauth_logs', function($table) {
                 $table->increments('id')->unsigned();
                 $table->string('provider',  100)->nullable();
                 $table->enum('result', ['successful', 'failed']);
@@ -20,7 +20,7 @@
         }
 
         public function down() {
-            Schema::drop('ki_xauth_logs');
+            Schema::drop('nethavn_xauth_logs');
         }
 
     }

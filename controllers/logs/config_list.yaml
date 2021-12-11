@@ -1,6 +1,6 @@
-title     : ki.xauth::lang.plugin.description_title
-list      : $/ki/xauth/models/logs/columns.yaml
-modelClass: KI\XAUTH\Models\Log
+title     : nethavn.xauth::lang.plugin.description_title
+list      : $/nethavn/xauth/models/logs/columns.yaml
+modelClass: NETHAVN\XAUTH\Models\Log
 
 noRecordsMessage: backend::lang.list.no_records
 recordsPerPage  : 30

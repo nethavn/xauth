@@ -1,6 +1,6 @@
 <?php
 
-    namespace KI\XAUTH\Controllers;
+    namespace NETHAVN\XAUTH\Controllers;
 
     use BackendMenu;
     use Backend\Classes\Controller;
@@ -13,12 +13,12 @@
         ];
 
         public $listConfig          = 'config_list.yaml';
-        public $requiredPermissions = ['ki.xauth.access'];
+        public $requiredPermissions = ['nethavn.xauth.access'];
 
         public function __construct() {
             parent::__construct();
             BackendMenu::setContext('October.System', 'system', 'settings');
-            SettingsManager::setContext('ki.xauth', 'logs');
+            SettingsManager::setContext('nethavn.xauth', 'logs');
         }
 
     }

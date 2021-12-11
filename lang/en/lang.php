@@ -3,11 +3,11 @@
     return [                                                                                                                               
                                                                                                                                            
         'plugin' => [                                                                                                                      
-            'name'              => 'KI XAUTH Service',                                                                                     
+            'name'              => 'NETHAVN XAUTH Service',                                                                                     
             'description'       => 'Backend Login Service for all hosted instances',                                                       
             'description_log'   => 'View all authentication attempts with Single Sign-on',                                                 
             'description_title' => 'Authentication attempts',                                                                              
-            'permissions'       => 'KI XAUTH Log and Service Access'                                                                            
+            'permissions'       => 'NETHAVN XAUTH Log and Service Access'                                                                            
         ],                                                                                                                                 
                                                                                                                                            
         'settings' => [                                                                                                                    
@@ -35,7 +35,7 @@
                                                                                                                                            
         'errors' => [                                                                                                                      
             'google' => [                                                                                                                  
-                'generic'                    => 'Knight Industries Authentication Server cannot serve your request this time.:',           
+                'generic'                    => 'NETHAVN Authentication Server cannot serve your request this time.:',           
                 'google_client_id_blank'     => ' missing "Client ID" value',                                                              
                 'google_client_secret_blank' => ' missing "Client secret" value',                                                          
                 'invalid_user'               => 'The account has no access to this system or does not exist.'                              
